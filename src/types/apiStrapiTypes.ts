@@ -143,6 +143,7 @@ export type Card = {
   size: string;
   count?: number;
   union: string;
+  image: StrapiImage;
 };
 
 export type NaboriResponce = Card[];
