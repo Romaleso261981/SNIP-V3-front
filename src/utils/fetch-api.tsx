@@ -138,12 +138,12 @@ export async function getDoItYourselfStrapiData(locale: string = "uk") {
 }
 export async function getInviteUsStrapiData(locale: string = "uk") {
   try {
-    const urlParamsObject_V2 = {
+    const urlParamsObject = {
       populate: {
-        cardsExample: {
+        examples: {
           populate: "*"
         },
-        desctopGalleryimages: {
+        gallery: {
           populate: "*"
         }
       },
@@ -152,7 +152,7 @@ export async function getInviteUsStrapiData(locale: string = "uk") {
 
     const { data }: { data: InviteUsStrapiResponce } = await fetchAPI(
       endpoints.inviteUs,
-      urlParamsObject_V2
+      urlParamsObject
     );
 
     return {

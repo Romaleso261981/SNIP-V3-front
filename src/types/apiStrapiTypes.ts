@@ -118,11 +118,12 @@ export type InviteUsResponce = {
 
 export type InviteUsStrapiResponce = {
   id: number;
-  desctopGalleryimages: StrapiImage[];
-  cardsExample: {
+  gallery: StrapiImage[];
+  examples: {
+    id: string;
     text: string;
-    title: string;
-    imageExample: StrapiImage;
+    description: string;
+    image: StrapiImage;
   }[];
   locale: string;
   text: string;

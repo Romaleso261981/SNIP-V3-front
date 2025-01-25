@@ -6,9 +6,10 @@ import { StrapiImage } from "@/types/apiStrapiTypes";
 
 type InviteUsCardListProps = {
   examples: {
+    id: string;
     text: string;
-    title: string;
-    imageExample: StrapiImage;
+    description: string;
+    image: StrapiImage;
   }[];
   gallery: StrapiImage[];
 };
@@ -26,10 +27,10 @@ const InviteUsCardList: FC<InviteUsCardListProps> = ({ examples, gallery }) => {
           >
             <div className="flex flex-col justify-between flex-grow h-full w-4/5 text-center">
               <h3 className="w-full font-medium text-slate-700 text-2xl py-4 px-3 border-b-2 border-gold">
-                {example ? example.title : t("cardListText")}
+                {example ? example.text : t("cardListText")}
               </h3>
               <p className="flex-grow w-full text-slate-600 text-sm py-4 px-3">
-                {example ? example.text : t("cardListDescription")}
+                {example ? example.description : t("cardListDescription")}
               </p>
               <button className="w-full border border-gold text-gold text-sm mt-8 py-3 px-3">
                 {t("cardListbuttonText")}

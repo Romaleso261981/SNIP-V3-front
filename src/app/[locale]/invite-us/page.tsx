@@ -21,14 +21,13 @@ export default async function Home({
 
   const { data }: InviteUsResponce = await getInviteUsStrapiData(locale);
 
+  console.log("InviteUs data", data);
+
   return (
     <GeneralLayout>
       <InviteUsDescription data={data} />
-      <InviteUsCardListExample examples={data.cardsExample} />
-      <InviteUsCardList
-        gallery={data.desctopGalleryimages}
-        examples={data.cardsExample}
-      />
+      <InviteUsCardListExample examples={data.examples} />
+      <InviteUsCardList gallery={data.gallery} examples={data.examples} />
     </GeneralLayout>
   );
 }
