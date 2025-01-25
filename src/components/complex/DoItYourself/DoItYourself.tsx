@@ -8,7 +8,7 @@ import { getStrapiMedia } from "@/utils/api-helpers";
 export default function DoItYourself({ data }: { data: DoItYourselfResponce }) {
   const t = useTranslations("DoItYourself");
 
-  const url = getStrapiMedia(data.examples.image.url);
+  const url = getStrapiMedia(data.examples[0].image.url);
 
   return (
     <div>
@@ -27,12 +27,12 @@ export default function DoItYourself({ data }: { data: DoItYourselfResponce }) {
         <Image
           alt="bg"
           src={url || ""}
-          width={data.examples.image.width}
-          height={data.examples.image.height}
+          width={data.examples[0].image.width}
+          height={data.examples[0].image.height}
           className="mb-4"
         />
         <h4 className="text-black font-montserrat font-weight-500 text-2xs">
-          {data ? data.examples.title : t("examplesText")}
+          {data ? data.examples[0].title : t("examplesText")}
         </h4>
       </div>
     </div>

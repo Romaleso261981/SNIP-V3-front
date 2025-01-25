@@ -109,7 +109,7 @@ export type DoItYourselfResponce = {
     id: number;
     image: StrapiImage;
     title: string;
-  };
+  }[];
 };
 
 export type InviteUsResponce = {
