@@ -10,21 +10,21 @@ export default function MidleDescription({
 }: {
   data: AboutStrapiResponce;
 }) {
-  const { rightFounder, leftFounder, desctopImages, mobileImage } = data;
+  const { rightFounder, leftFounder, imagesDesctop, images } = data;
 
   return (
     <div className="flex flex-col justify-center items-center">
       <div className="flex md:hidden ">
         <Image
-          src={getStrapiMedia(mobileImage.url) || ""}
+          src={getStrapiMedia(images.images[0].url) || ""}
           alt="image5"
-          width={mobileImage.width}
-          height={mobileImage.height}
+          width={images.images[0].width}
+          height={images.images[0].height}
           objectFit="cover"
         />
       </div>
       <div className="hidden md:flex flex-row justify-around w-full">
-        {desctopImages.map((image, index) => {
+        {imagesDesctop.map((image, index) => {
           const url = getStrapiMedia(image.url);
           return (
             <div key={index} className="w-full flex justify-center mt-10">

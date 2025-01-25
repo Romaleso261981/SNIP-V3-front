@@ -70,9 +70,11 @@ export type AboutStrapiResponce = {
   bottomFirstText: string;
   bottomSecondText: string;
   desctopSeparatorImage: StrapiImage;
-  mobileSeparatorImage: StrapiImage;
-  desctopImages: StrapiImage[];
-  mobileImage: StrapiImage;
+  separatorImageMobile: StrapiImage;
+  imagesDesctop: StrapiImage[];
+  images: {
+    images: StrapiImage[];
+  };
   leftFounder: string;
   main: {
     id: string;

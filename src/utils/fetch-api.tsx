@@ -81,13 +81,13 @@ export async function getAboutStrapiData(locale: string = "uk") {
         desctopSeparatorImage: {
           populate: "*"
         },
-        mobileSeparatorImage: {
+        separatorImageMobile: {
           populate: "*"
         },
-        desctopImages: {
+        imagesDesctop: {
           populate: "*"
         },
-        mobileImage: {
+        images: {
           populate: "*"
         }
       },

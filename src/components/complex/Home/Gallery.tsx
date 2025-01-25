@@ -10,8 +10,6 @@ type GallerySectionProps = {
 };
 
 const GallerySection: FC<GallerySectionProps> = ({ gallery }) => {
-  console.log("gallery", gallery);
-
   if (!gallery) return <Loader />;
 
   return (

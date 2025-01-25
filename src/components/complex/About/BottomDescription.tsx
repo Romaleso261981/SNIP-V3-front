@@ -11,7 +11,7 @@ export default async function BottomDescription({
     bottomFirstText,
     bottomSecondText,
     desctopSeparatorImage,
-    mobileSeparatorImage
+    separatorImageMobile
   } = data;
 
   return (
@@ -28,9 +28,9 @@ export default async function BottomDescription({
       </div>
       <div className="flex md:hidden">
         <Image
-          src={getStrapiMedia(mobileSeparatorImage.url) || ""}
+          src={getStrapiMedia(separatorImageMobile.url) || ""}
           width={2400}
-          height={mobileSeparatorImage.height}
+          height={separatorImageMobile.height}
           objectFit="cover"
           alt="Separator"
           loading="lazy"
