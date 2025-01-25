@@ -20,8 +20,6 @@ export default async function page({
 
   const { data, naboris } = await getByFromUsStrapiData(locale);
 
-  console.log("buy-from-us data", naboris);
-
   return (
     <GeneralLayout>
       <BuyFromUsDescription data={data} />
