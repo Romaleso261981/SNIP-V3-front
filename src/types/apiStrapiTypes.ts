@@ -54,11 +54,13 @@ export type ButtonStrapiData = {
   name: string;
 };
 
-export type HomeGalaryStrapiData = { id: string; images: StrapiImage };
+export type HomeGalaryStrapiData = {
+  images: StrapiImage[];
+};
 
 export type HomeStrapiResponce = {
   about: AboutStrapiData;
-  gallery: HomeGalaryStrapiData[];
+  gallery: HomeGalaryStrapiData;
   button: ButtonStrapiData;
   hero: HeroStrapiData;
 };

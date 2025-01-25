@@ -4,8 +4,8 @@ import HomeLayout from "@/components/layout/HomeLayout/HomeLayout";
 
 import { getMainStrapiData } from "@/utils/fetch-api";
 import Loader from "@/components/ui/Loader";
-import DescriptionSection from "@/components/complex/Home/Description";
 import HeroSection from "@/components/complex/Home/Hero";
+import DescriptionSection from "@/components/complex/Home/Description";
 import GallerySection from "@/components/complex/Home/Gallery";
 
 export const metadata: Metadata = {
