@@ -1,8 +1,8 @@
+import { FC } from "react";
 import Image from "next/image";
 
 import { HeroStrapiData } from "@/types/apiStrapiTypes";
 import { getStrapiMedia } from "@/utils/api-helpers";
-import { FC } from "react";
 
 type HeroSectionProps = {
   data: HeroStrapiData;

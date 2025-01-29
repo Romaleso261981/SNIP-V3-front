@@ -28,7 +28,7 @@ export default async function AboutUsPage({
 
   return (
     <GeneralLayout>
-      <div className="container mx-auto flex flex-col justify-center items-center w-full text-center pt-10 md:p-0">
+      <div className="mx-auto flex flex-col justify-center items-center w-full text-center pt-10 md:p-0">
         <TopDescription main={data.main} />
         <MidleDescription data={data} />
         <BottomDescription data={data} />

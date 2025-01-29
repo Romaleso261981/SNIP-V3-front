@@ -24,7 +24,7 @@ const InviteUsCardListExample: FC<InviteUsCardListProps> = ({ examples }) => {
         return (
           <article
             key={example.id}
-            className="flex flex-col items-center w-full p-4 md:w-1/3 h-full min-h-[350px]"
+            className="h-full py-3 flex flex-col items-center w-full md:p-4 md:w-1/3 min-h-[350px]"
           >
             <div className="w-4/5 md:h-96 overflow-hidden">
               <Image
@@ -34,7 +34,7 @@ const InviteUsCardListExample: FC<InviteUsCardListProps> = ({ examples }) => {
                 height={1200}
               />
             </div>
-            <div className="flex flex-col justify-between flex-grow h-full w-4/5 text-center">
+            <div className="w-full flex flex-col justify-between flex-grow h-full md:w-4/5 text-center">
               <h3 className="w-full font-medium text-slate-700 text-2xl py-4 px-3 border-b-2 border-gold">
                 {example ? example.text : t("cardListText")}
               </h3>

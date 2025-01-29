@@ -28,8 +28,6 @@ const BasketDescription: FC<BasketDescriptionProps> = ({ router }) => {
     handleToggleBasket
   } = useContext(BasketContext);
 
-  console.log("basketItems", basketItems);
-
   const { setParchaseList } = useContext(CheckOutContext);
 
   const checkOut = (basketItems: Card[]) => {
@@ -73,7 +71,7 @@ const BasketDescription: FC<BasketDescriptionProps> = ({ router }) => {
               key={index}
               className="flex justify-between items-center w-full mb-5 border-gold border-b-2 pb-4"
             >
-              <BasketImage image={card.image.url || ""} />
+              <BasketImage image={card.images[0].url} />
               <div className="w-full h-full flex pl-4 flex-col items-start">
                 <p className="pb-8">
                   {card.name}

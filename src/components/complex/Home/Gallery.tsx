@@ -13,22 +13,18 @@ const GallerySection: FC<GallerySectionProps> = ({ gallery }) => {
   if (!gallery) return <Loader />;
 
   return (
-    <div className="container mx-auto">
-      <div className="hidden md:flex md:flex-wrap justify-center items-center text-center p-4 pb-8">
-        {gallery.images.map(image => {
+    <div className="mx-auto">
+      <div className="hidden  md:flex md:flex-row md:justify-center px-3 items-start w-full text-center">
+        {gallery.images.map((image, index) => {
+          const imageUrl = getStrapiMedia(image.url);
           return (
-            <div
-              className="w-full sm:w-1/2 md:w-1/4 h-full p-2 md:p-0 "
-              key={image.id}
-            >
-              <div className="relative w-full h-0 pb-[66.66%]">
-                <Image
-                  src={getStrapiMedia(image.url) || ""}
-                  alt="Gallery Image"
-                  layout="fill"
-                  objectFit="cover"
-                />
-              </div>
+            <div key={index} className="w-4/5 md:h-96 overflow-hidden">
+              <Image
+                src={imageUrl || ""}
+                alt="Gallery Image"
+                width={700}
+                height={1200}
+              />
             </div>
           );
         })}

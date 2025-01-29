@@ -25,16 +25,18 @@ const InviteUsCardList: FC<InviteUsCardListProps> = ({ examples, gallery }) => {
             key={index}
             className="flex flex-col items-center w-full p-4 md:w-1/3 h-full min-h-[350px]"
           >
-            <div className="flex flex-col justify-between flex-grow h-full w-4/5 text-center">
+            <div className="flex flex-col justify-between mx-auto h-full w-4/5 text-center">
               <h3 className="w-full font-medium text-slate-700 text-2xl py-4 px-3 border-b-2 border-gold">
                 {example ? example.text : t("cardListText")}
               </h3>
               <p className="flex-grow w-full text-slate-600 text-sm py-4 px-3">
                 {example ? example.description : t("cardListDescription")}
               </p>
-              <button className="w-full border border-gold text-gold text-sm mt-8 py-3 px-3">
-                {t("cardListbuttonText")}
-              </button>
+              <div className="w-full flex justify-center">
+                <button className="w-full border border-gold text-gold text-sm mt-8 py-3 px-3 md:w-3/4">
+                  {t("cardListbuttonText")}
+                </button>
+              </div>
             </div>
           </article>
         )}

@@ -69,5 +69,15 @@
     "totalCoutUnion": "Грн.",
     "buttonText": "Оформити замовлення.",
     "cardbuttonText": "Видалити."
+  },
+  "mobileMenu": {
+    "contactTitle": "Контакти",
+    "mainTitle": "Меню",
+    "doItYourself": "Зроби власноруч",
+    "buyFromUs": "Купи в нас",
+    "inviteUs": "Запроси нас",
+    "about": "Про нас",
+    "email": "Gmail: snip.solomy@gmail.com",
+    "phone": "Тел: +380 67 435 82 00"
   }
 }

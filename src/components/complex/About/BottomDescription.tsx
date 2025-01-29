@@ -36,10 +36,11 @@ export default async function BottomDescription({
           loading="lazy"
         />
       </div>
-      <div className="flex flex-col justify-center gap-3 items-center w-11/12 px-2 py-10 sm:w-2/4 md:justify-between md:px-3">
-        <p className="py-10">
+      <div className="w-full flex flex-col justify-center gap-3 text-black items-center px-2 py-10 sm:w-3/4 md:w-2/6 md:justify-between md:px-3">
+        <p className="py-10 ">
           {bottomFirstText}
         </p>
+        <div className="w-2/4 border-b border-b-gold" />
         <p className="py-10">
           {bottomSecondText}
         </p>

@@ -21,8 +21,6 @@ export default async function Home({
 
   const { data }: InviteUsResponce = await getInviteUsStrapiData(locale);
 
-  console.log("InviteUs data", data);
-
   return (
     <GeneralLayout>
       <InviteUsDescription data={data} />

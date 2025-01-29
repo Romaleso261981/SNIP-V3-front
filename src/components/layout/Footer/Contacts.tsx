@@ -11,7 +11,7 @@ const Contacts = () => {
       <h3 className="text-gold font-semibold xl:flex-col xl:items-start">
         {t("title")}
       </h3>
-      <ul className="flex gap-2 flex-col items-center text-dark xl:flex-row xl:items-start">
+      <ul className="flex gap-2 text-black flex-col items-center text-dark xl:flex-row xl:items-start">
         <li>
           <a href="tel:380674358200">{`${t("phone")}: 0674358200`}</a>
         </li>

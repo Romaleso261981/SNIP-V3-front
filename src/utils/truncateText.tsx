@@ -20,8 +20,8 @@ export default function TextTruncate({
     text.length > maxLength ? text.substring(0, maxLength) + " ..." : text;
 
   return (
-    <div>
-      <p>
+    <div className="flex justify-center items-center w-full">
+      <p className="w-full md:w-2/3">
         {showMore ? text : truncatedText}
         {text.length > maxLength &&
           <span

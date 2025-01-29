@@ -14,7 +14,7 @@ const config: Config = {
         blue: "#F0E2C9",
         darkBrown: "#C5A262",
         white: "#F3F2EE",
-        gold: { DEFAULT: "#9F8652", light: "#C3A47E", dark: "#7F7045", },
+        gold: { DEFAULT: "#9F8652", light: "#C3A47E", dark: "#7F7045" },
       },
       fontSize: {
         xxxl: ["40px", { lineHeight: "120%" }],
@@ -26,7 +26,30 @@ const config: Config = {
         xs: ["12px", { lineHeight: "14.4px" }],
       },
       animation: {
-        'spin-slow': 'spin 4s linear infinite',
+        'move-horizontal': 'moveHorizontal 5s ease-in-out forwards',
+      },
+      keyframes: {
+        moveHorizontal: {
+          '0%': {
+            transform: 'scale(1.8) translateX(0%)',
+          },
+          '25%': {
+            transform: 'scale(1.8) translateX(-5%)',
+          },
+          '50%': {
+            transform: 'scale(1.8) translateX(10%)',
+          },
+          '75%': {
+            transform: 'scale(1.8) translateX(15%)',
+          },
+          '100%': {
+            transform: 'scale(1.8) translateX(20%)',
+          },
+        },
+      },
+      lineHeight: {
+        'custom-1': '22.4px',
+        'custom-2': '38.4px',
       },
     },
   },

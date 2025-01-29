@@ -69,5 +69,15 @@
     "totalCoutUnion": "Grn.",
     "buttonText": "Make an order.",
     "cardbuttonText": "Remove."
+  },
+  "mobileMenu": {
+    "contactTitle": "Contacts",
+    "mainTitle": "Menu",
+    "doItYourself": "do It Yourself",
+    "buyFromUs": "Buy from us",
+    "inviteUs": "Invite us",
+    "about": "About",
+    "email": "Gmail: snip.solomy@gmail.com",
+    "phone": "Phone: +380 67 435 82 00"
   }
 }

@@ -10,7 +10,7 @@ const Information = () => {
         {t("title")}
       </h3>
       <div className="flex gap-3 flex-col items-center">
-        <ul className="flex gap-3 flex-col text-center items-center text-dark xl:flex-row">
+        <ul className="flex gap-3 text-black flex-col text-center items-center text-dark xl:flex-row">
           <li>
             <Link href="/uk/policy">
               {t("policy")}
@@ -22,7 +22,7 @@ const Information = () => {
             </Link>
           </li>
         </ul>
-        <ul className="flex gap-3 flex-col text-center items-center text-dark xl:flex-row">
+        <ul className="flex gap-3 text-black flex-col text-center items-center text-dark xl:flex-row">
           <li>
             <Link href="">
               {t("return")}
