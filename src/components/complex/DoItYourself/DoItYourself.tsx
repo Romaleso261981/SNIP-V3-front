@@ -18,27 +18,26 @@ export default function DoItYourself({ data }: { data: DoItYourselfResponce }) {
         <h3 className="text-gold font-montserrat mt-9 font-weight-500 text-3xl pb-4">
           {data ? data.main.title : t("title")}
         </h3>
-        <p className="w-2/5 text-center pb-4 text-black font-montserrat font-weight-500 text-2xs">
+        <p className="text-center pb-4 text-black font-montserrat font-weight-500 text-2xs md:w-2/5">
           {data ? data.main.text : t("text")}
         </p>
-        <p className="text-center text-black font-montserrat font-weight-500 text-2xs">
+        <p className="text-center text-black font-montserrat font-weight-500 text-2xs md:w-2/5">
           {data ? data.main.bottomText : t("mainBottomText")}
         </p>
       </div>
 
       <div className="text-center flex flex-col items-center mt-14 mb-14">
         <div
-          className="relative"
+          className="relative w-full"
           onMouseEnter={() => setIsHovered(true)}
           onMouseLeave={() => setIsHovered(false)}
         >
           {isHovered
             ? <iframe
-                width="463"
-                height="823"
+                width="100%"
+                height="auto"
                 src="https://www.youtube.com/embed/Lm1nK9lkBw0?autoplay=1"
                 title="Різдвяний павук (як сплести октаедр?) набір для плетіння"
-                frameBorder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                 referrerPolicy="strict-origin-when-cross-origin"
                 allowFullScreen
@@ -49,7 +48,7 @@ export default function DoItYourself({ data }: { data: DoItYourselfResponce }) {
                 src={url || ""}
                 width={680}
                 height={450}
-                className="mb-4"
+                className="w-full h-auto mb-4"
               />}
         </div>
 
