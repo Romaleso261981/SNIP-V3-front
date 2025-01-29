@@ -13,8 +13,8 @@ export default function DoItYourself({ data }: { data: DoItYourselfResponce }) {
   const url = getStrapiMedia(data.examples[0].image.url);
 
   return (
-    <div className="w-full">
-      <div className="flex flex-col justify-center items-center md:px-8">
+    <div className="w-full px-4 md:px-8">
+      <div className="flex flex-col justify-center items-center">
         <h3 className="text-gold font-montserrat mt-9 font-weight-500 text-3xl pb-4">
           {data ? data.main.title : t("title")}
         </h3>
@@ -27,33 +27,32 @@ export default function DoItYourself({ data }: { data: DoItYourselfResponce }) {
       </div>
 
       <div className="text-center flex flex-col items-center mt-14 mb-14">
-        <div
-          className="relative w-full"
-          onMouseEnter={() => setIsHovered(true)}
-          // onMouseLeave={() => setIsHovered(false)}
-        >
+        <div className="relative">
           {isHovered
-            ? <div className="flex justify-center">
+            ? <div className="flex justify-center px-2">
                 <iframe
-                  width="auto"
-                  height="450px"
                   src="https://www.youtube.com/embed/Lm1nK9lkBw0?autoplay=1"
                   title="Різдвяний павук (як сплести октаедр?) набір для плетіння"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                   referrerPolicy="strict-origin-when-cross-origin"
                   allowFullScreen
-                  className="mb-4"
+                  className="mb-4 w-full h-72 md:w-96 md:h-72"
                 />
               </div>
-            : <Image
-                alt="bg"
-                src={url || ""}
-                width={680}
-                height={450}
-                className="w-full h-auto mb-4"
-              />}
+            : <div
+                className="flex justify-center"
+                onMouseEnter={() => setIsHovered(true)}
+                onMouseLeave={() => setIsHovered(false)}
+              >
+                <Image
+                  alt="bg"
+                  src={url || ""}
+                  width={450}
+                  height={450}
+                  className="h-auto w-64 md:w-96"
+                />
+              </div>}
         </div>
-
         <h4 className="text-black font-montserrat font-weight-500 text-2xs">
           {data ? data.examples[0].title : t("examplesText")}
         </h4>

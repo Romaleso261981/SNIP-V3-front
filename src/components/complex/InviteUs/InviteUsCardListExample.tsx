@@ -35,7 +35,7 @@ const InviteUsCardListExample: FC<InviteUsCardListProps> = ({ examples }) => {
               />
             </div>
             <div className="w-full flex flex-col justify-between flex-grow h-full md:w-4/5 text-center">
-              <h3 className="w-full font-medium text-slate-700 text-2xl py-4 px-3 border-b-2 border-gold">
+              <h3 className="w-full font-medium text-gold text-2xl py-4 px-3 border-b-2 border-gold">
                 {example ? example.text : t("cardListText")}
               </h3>
               <p className="flex-grow w-full text-slate-600 text-sm py-4 px-3">

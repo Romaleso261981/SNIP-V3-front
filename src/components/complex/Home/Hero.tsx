@@ -8,14 +8,14 @@ type HeroSectionProps = {
   data: HeroStrapiData;
 };
 
-const HeroSection: FC<HeroSectionProps> = async ({ data }) => {
+const HeroSection: FC<HeroSectionProps> = ({ data }) => {
   return (
     <div className="relative overflow-hidden h-screen">
       <Image
         src={getStrapiMedia(data.image.url) || ""}
         alt="Galery Image"
-        layout="fill"
-        objectFit="cover"
+        fill
+        style={{ objectFit: "cover" }}
       />
       <div className="absolute inset-0 z-10 flex flex-col items-center justify-end h-full text-center text-white bg-opacity-20">
         <h2 className="text-4xl font-medium md:text-5xl font-montserrat lg:text-[45px] mb-8">

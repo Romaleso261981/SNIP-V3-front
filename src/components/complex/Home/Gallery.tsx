@@ -24,6 +24,7 @@ const GallerySection: FC<GallerySectionProps> = ({ gallery }) => {
                 alt="Gallery Image"
                 width={700}
                 height={1200}
+                style={{ objectFit: "cover" }}
               />
             </div>
           );
