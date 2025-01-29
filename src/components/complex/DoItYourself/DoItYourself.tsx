@@ -30,19 +30,21 @@ export default function DoItYourself({ data }: { data: DoItYourselfResponce }) {
         <div
           className="relative w-full"
           onMouseEnter={() => setIsHovered(true)}
-          onMouseLeave={() => setIsHovered(false)}
+          // onMouseLeave={() => setIsHovered(false)}
         >
           {isHovered
-            ? <iframe
-                width="100%"
-                height="auto"
-                src="https://www.youtube.com/embed/Lm1nK9lkBw0?autoplay=1"
-                title="Різдвяний павук (як сплести октаедр?) набір для плетіння"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                referrerPolicy="strict-origin-when-cross-origin"
-                allowFullScreen
-                className="mb-4"
-              />
+            ? <div className="flex justify-center">
+                <iframe
+                  width="auto"
+                  height="450px"
+                  src="https://www.youtube.com/embed/Lm1nK9lkBw0?autoplay=1"
+                  title="Різдвяний павук (як сплести октаедр?) набір для плетіння"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  referrerPolicy="strict-origin-when-cross-origin"
+                  allowFullScreen
+                  className="mb-4"
+                />
+              </div>
             : <Image
                 alt="bg"
                 src={url || ""}
