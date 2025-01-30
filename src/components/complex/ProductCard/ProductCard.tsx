@@ -24,8 +24,8 @@ export default function ProductCard({
     <div className="container">
       <Breadcrumb locale={locale} />
       <div className="flex flex-col items-start py-4 w-full justify-around md:flex-row-reverse md:py-6">
-        <div className="w-full h-auto md:w-1/2">
-          <CardImage image={product.images[0].url} />
+        <div className="w-full h-auto md:max-w-xl">
+          <CardImage images={product.images} />
         </div>
         <div className="w-full flex flex-col justify-center items-center md:pl-16 md:pr-24 md:w-1/2">
           <MainTitle product={product} />
