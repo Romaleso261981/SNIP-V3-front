@@ -18,7 +18,7 @@ export default function ProductList({ cards }: { cards: Card[] }) {
 
   const cardList = DATA.currentData();
 
-  const handleChange = (e: React.ChangeEvent<unknown>, p: number) => {
+  const handleChange = (_: React.ChangeEvent<unknown>, p: number) => {
     setPage(p);
     DATA.jump(p);
   };
@@ -40,8 +40,8 @@ export default function ProductList({ cards }: { cards: Card[] }) {
                     <Image
                       src={imageUrl}
                       alt={card.name || "Product image"}
-                      layout="fill"
-                      objectFit="cover"
+                      fill
+                      style={{ objectFit: "cover" }}
                       className="transition-all duration-500 ease-in-out transform hover:scale-150 hover:animate-move-horizontal"
                     />
                   </div>

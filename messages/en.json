@@ -53,7 +53,9 @@
     "sizeTitle": "Assembled product:",
     "materialTitle": "Material:",
     "includesTitle": "The set includes:",
-    "addToBasket": "Purchase"
+    "addToBasket": "Purchase",
+    "buttonText": "You can also make a spider yourself by growing rye and using our",
+    "span": "instruction."
   },
   "ProductsList": {
     "currency": "UAH",
