@@ -81,5 +81,9 @@
     "about": "About",
     "email": "Gmail: snip.solomy@gmail.com",
     "phone": "Phone: +380 67 435 82 00"
+  },
+  "TextTruncate": {
+    "readMore": "more",
+    "readLess": "less"
   }
 }

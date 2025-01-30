@@ -81,5 +81,9 @@
     "about": "Про нас",
     "email": "Gmail: snip.solomy@gmail.com",
     "phone": "Тел: +380 67 435 82 00"
+  },
+  "TextTruncate": {
+    "readMore": "більше",
+    "readLess": "менше"
   }
 }

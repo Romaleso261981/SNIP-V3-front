@@ -8,7 +8,7 @@ export default function AddToBasketButton({ buttonText, product }) {
 
   return (
     <div
-      className="flex w-3/4 h-14 xl:justify-center md:w-1/3 md:mt-20"
+      className="flex w-full h-14 xl:justify-center md:w-1/3 md:mt-20"
       onClick={() => addCardToBasket(product)}
     >
       <button className="inline-block px-4 py-2 mt-4 text-sm w-full font-semibold text-white transition duration-200 ease-in-out bg-gold hover:bg-zinc-600">

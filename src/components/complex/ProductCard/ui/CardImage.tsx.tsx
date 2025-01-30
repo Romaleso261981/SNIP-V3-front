@@ -6,7 +6,7 @@ export default function CardImage({ image }: { image: string }) {
   const imageUrl = getStrapiMedia(image);
 
   return (
-    <div className="">
+    <div className="w-full">
       <Image
         src={imageUrl || ""}
         alt="Image description"

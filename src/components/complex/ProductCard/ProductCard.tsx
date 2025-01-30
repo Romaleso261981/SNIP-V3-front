@@ -23,13 +23,13 @@ export default function ProductCard({
   return (
     <div className="container">
       <Breadcrumb locale={locale} />
-      <div className="flex flex-col items-start w-full justify-around md:flex-row-reverse md:py-6">
+      <div className="flex flex-col items-start py-4 w-full justify-around md:flex-row-reverse md:py-6">
         <div className="w-full h-auto md:w-1/2">
           <CardImage image={product.images[0].url} />
         </div>
-        <div className="w-1/2 flex flex-col justify-center items-center md:pl-16 md:pr-24">
+        <div className="w-full flex flex-col justify-center items-center md:pl-16 md:pr-24 md:w-1/2">
           <MainTitle product={product} />
-          <div className="flex flex-row text-black pt-16 items-center justify-start w-full">
+          <div className="flex flex-row pr-2 justify-between text-black pt-16 items-center md:justify-start w-full">
             <Size product={product} />
             <Material product={product} />
           </div>

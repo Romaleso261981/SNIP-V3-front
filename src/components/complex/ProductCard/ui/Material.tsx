@@ -5,7 +5,7 @@ export default function Material({ product }) {
   const t = useTranslations("ProductCard");
 
   return (
-    <div className="flex flex-col gap-2 ml-36">
+    <div className="flex flex-col gap-2 md:ml-36">
       <h4 className="font-bold">
         {t("materialTitle")}
       </h4>
