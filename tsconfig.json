@@ -21,7 +21,8 @@
     ],
     "paths": {
       "@/*": ["./src/*"]
-    }
+    },
+    "types": ["jest", "node"]  // Додайте це для Jest
   },
   "include": [
     "next-env.d.ts",

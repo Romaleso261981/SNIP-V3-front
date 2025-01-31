@@ -9,13 +9,16 @@ type HeroSectionProps = {
 };
 
 const HeroSection: FC<HeroSectionProps> = ({ data }) => {
+  const imageUrl = getStrapiMedia(data.image.url) || "/default-image.jpg";
+
   return (
     <div className="relative overflow-hidden h-screen">
       <Image
-        src={getStrapiMedia(data.image.url) || ""}
+        src={imageUrl}
         alt="Galery Image"
         fill
-        style={{ objectFit: "cover" }}
+        className="object-cover"
+        sizes="(max-width: 768px) 100vw, 1200px"
       />
       <div className="absolute inset-0 z-10 flex flex-col items-center justify-end h-full text-center text-white bg-opacity-20">
         <h2 className="text-4xl font-medium md:text-5xl font-montserrat lg:text-[45px] mb-8">
