@@ -1,4 +1,3 @@
-// jest.config.js
 import nextJest from "next/jest";
 
 const createJestConfig = nextJest({
@@ -6,21 +5,21 @@ const createJestConfig = nextJest({
 });
 
 const customJestConfig = {
-  setupFilesAfterEnv: ["<rootDir>/jest.setup.ts"], // Якщо є файл з налаштуваннями для тестів
+  setupFilesAfterEnv: ["<rootDir>/jest.setup.ts"],
   testEnvironment: "jest-environment-jsdom",
   moduleNameMapper: {
-    "^@/(.*)$": "<rootDir>/src/$1", // Маппінг для ваших псевдонімів шляхів
-    "\\.(css|less|scss|sass)$": "identity-obj-proxy" // Для маппінгу стилів
+    "^@/(.*)$": "<rootDir>/src/$1",
+    "\\.(css|less|scss|sass)$": "identity-obj-proxy"
   },
   transform: {
-    "^.+\\.(ts|tsx)$": "babel-jest" // Використання babel для трансформації TypeScript та JSX
+    "^.+\\.(ts|tsx)$": "babel-jest"
   },
   collectCoverageFrom: [
-    "src/**/*.{ts,tsx}", // Включення всіх TypeScript файлів в покриття
-    "!src/pages/_app.tsx", // Не брати ці файли до покриття
+    "src/**/*.{ts,tsx}",
+    "!src/pages/_app.tsx",
     "!src/pages/_document.tsx"
   ],
-  coverageReporters: ["lcov", "text-summary"] // Формати покриття
+  coverageReporters: ["lcov", "text-summary"]
 };
 
 export default createJestConfig(customJestConfig);
