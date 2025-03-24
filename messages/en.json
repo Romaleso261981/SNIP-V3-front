@@ -1,7 +1,8 @@
 {
   "HomePage": {
     "title": "About us",
-    "description": "SNIP is a straw products workshop where we are inspired by traditional culture to interpret it in a modern interior. The value of our products is that they are created by hand from grain to stem, from straw to spider. We sow rye on our native fields, grow and take care of it, then harvest it by hand and prepare rye straw for the next work. "
+    "description": "SNIP is a straw products workshop where we are inspired by traditional culture to interpret it in a modern interior. The value of our products is that they are created by hand from grain to stem, from straw to spider. We sow rye on our native fields, grow and take care of it, then harvest it by hand and prepare rye straw for the next work. ",
+    "buttonName": "Learn more"
   },
   "Header": {
     "title": "SNIP"

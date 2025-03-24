@@ -6,7 +6,7 @@ import {
   DoItYourselfResponce,
   HomeStrapiResponce,
   InviteUsStrapiResponce,
-  NaboriResponce
+  NaboriResponce,
 } from "@/types/apiStrapiTypes";
 import { endpoints } from "@/configs/endpoints";
 
@@ -18,14 +18,16 @@ export async function fetchAPI(path: string, urlParamsObject = {}) {
       next: { revalidate: 60 },
       headers: {
         "Content-Type": "application/json",
-        Authorization: `Bearer ${token}`
-      }
+        Authorization: `Bearer ${token}`,
+      },
     };
 
     const queryString = qs.stringify(urlParamsObject);
     const requestUrl = `${getStrapiURL(
       `${path}${queryString ? `?${queryString}` : ""}`
     )}`;
+
+    console.log("requestUrl", requestUrl);
 
     const response = await fetch(requestUrl, mergedOptions);
     const data = await response.json();
@@ -41,27 +43,16 @@ export async function fetchAPI(path: string, urlParamsObject = {}) {
 export async function getMainStrapiData(locale: string = "uk") {
   try {
     const urlParamsObject_V2 = {
-      populate: {
-        about: {
-          populate: "*"
-        },
-        button: {
-          populate: "*"
-        },
-        gallery: {
-          populate: "*"
-        },
-        hero: {
-          populate: "*"
-        }
-      },
-      locale: locale
+      populate: "*",
+      locale: locale,
     };
 
     const { data }: { data: HomeStrapiResponce } = await fetchAPI(
       endpoints.home,
       urlParamsObject_V2
     );
+
+    console.log("main data", data);
 
     return { data };
   } catch (error) {
@@ -76,23 +67,23 @@ export async function getAboutStrapiData(locale: string = "uk") {
     const urlParamsObject = {
       populate: {
         main: {
-          populate: "*"
+          populate: "*",
         },
         desctopSeparatorImage: {
-          populate: "*"
+          populate: "*",
         },
         separatorImageMobile: {
-          populate: "*"
+          populate: "*",
         },
         imagesDesctop: {
-          populate: "*"
+          populate: "*",
         },
         images: {
-          populate: "*"
-        }
+          populate: "*",
+        },
       },
 
-      locale: locale
+      locale: locale,
     };
 
     const { data }: { data: AboutStrapiResponce } = await fetchAPI(
@@ -113,14 +104,14 @@ export async function getDoItYourselfStrapiData(locale: string = "uk") {
     const urlParamsObject = {
       populate: {
         main: {
-          populate: "*"
+          populate: "*",
         },
         examples: {
-          populate: "*"
-        }
+          populate: "*",
+        },
       },
 
-      locale: locale
+      locale: locale,
     };
 
     const { data }: { data: DoItYourselfResponce } = await fetchAPI(
@@ -141,13 +132,13 @@ export async function getInviteUsStrapiData(locale: string = "uk") {
     const urlParamsObject = {
       populate: {
         examples: {
-          populate: "*"
+          populate: "*",
         },
         gallery: {
-          populate: "*"
-        }
+          populate: "*",
+        },
       },
-      locale: locale
+      locale: locale,
     };
 
     const { data }: { data: InviteUsStrapiResponce } = await fetchAPI(
@@ -156,7 +147,7 @@ export async function getInviteUsStrapiData(locale: string = "uk") {
     );
 
     return {
-      data
+      data,
     };
   } catch (error) {
     console.error(error);
@@ -169,12 +160,12 @@ export async function getByFromUsStrapiData(locale: string = "uk") {
   try {
     const urlParamsObject = {
       populate: "*",
-      locale: locale
+      locale: locale,
     };
 
     const urlParamsNabori = {
       populate: "*",
-      locale: locale
+      locale: locale,
     };
 
     const { data }: { data: BuyFromUsResponce } = await fetchAPI(
