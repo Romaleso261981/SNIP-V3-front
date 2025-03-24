@@ -27,8 +27,6 @@ export async function fetchAPI(path: string, urlParamsObject = {}) {
       `${path}${queryString ? `?${queryString}` : ""}`
     )}`;
 
-    console.log("requestUrl", requestUrl);
-
     const response = await fetch(requestUrl, mergedOptions);
     const data = await response.json();
 
@@ -43,7 +41,20 @@ export async function fetchAPI(path: string, urlParamsObject = {}) {
 export async function getMainStrapiData(locale: string = "uk") {
   try {
     const urlParamsObject_V2 = {
-      populate: "*",
+      populate: {
+        about: {
+          populate: "*",
+        },
+        button: {
+          populate: "*",
+        },
+        gallery: {
+          populate: "*",
+        },
+        video: {
+          populate: "*",
+        },
+      },
       locale: locale,
     };
 
@@ -51,8 +62,6 @@ export async function getMainStrapiData(locale: string = "uk") {
       endpoints.home,
       urlParamsObject_V2
     );
-
-    console.log("main data", data);
 
     return { data };
   } catch (error) {

@@ -5,6 +5,8 @@ import HomeLayout from "@/components/layout/HomeLayout/HomeLayout";
 import { getMainStrapiData } from "@/utils/fetch-api";
 import Loader from "@/components/ui/Loader";
 import DescriptionSection from "@/components/complex/Home/Description";
+import GallerySection from "@/components/complex/Home/Gallery";
+import HeroSection from "@/components/complex/Home/Hero";
 
 export const metadata: Metadata = {
   title: "СНІП",
@@ -23,11 +25,13 @@ export default async function HomePage({
 
   if (!data) return <Loader />;
 
+  console.log("HomePage data", data);
+
   return (
     <HomeLayout>
-      {/* <HeroSection data={data.hero} /> */}
+      <HeroSection video={data.video[0]} title={data.title} />
       <DescriptionSection about={data.about} />
-      {/* <GallerySection gallery={data.gallery} /> */}
+      <GallerySection gallery={data.gallery} />
     </HomeLayout>
   );
 }

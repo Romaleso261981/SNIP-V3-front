@@ -1,5 +1,5 @@
 export type HeroStrapiData = {
-  text: string;
+  title: string;
   image: StrapiImage;
 };
 
@@ -62,7 +62,8 @@ export type HomeStrapiResponce = {
   about: AboutStrapiData;
   gallery: HomeGalaryStrapiData;
   button: ButtonStrapiData;
-  hero: HeroStrapiData;
+  title: string;
+  video: StrapiImage[];
 };
 
 export type AboutStrapiResponce = {
