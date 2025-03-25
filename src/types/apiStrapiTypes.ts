@@ -84,13 +84,12 @@ export type AboutStrapiResponce = {
 
 export type BuyFromUsResponce = {
   id: number;
-  examples: {
+  hero: {
     id: number;
-    text: string;
-    image: StrapiImage;
-  }[];
-  main: { id: number; text: string; title: string };
-  mainBottomText: string;
+    description: string;
+    title: string;
+    secondaryDescription: string;
+  };
 };
 
 export type DoItYourselfResponce = {
