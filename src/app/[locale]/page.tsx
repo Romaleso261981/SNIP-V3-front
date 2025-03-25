@@ -25,8 +25,6 @@ export default async function HomePage({
 
   if (!data) return <Loader />;
 
-  console.log("HomePage data", data);
-
   return (
     <HomeLayout>
       <HeroSection video={data.video[0]} title={data.title} />

@@ -10,9 +10,6 @@ type HeroSectionProps = {
 };
 
 const HeroSection: FC<HeroSectionProps> = ({ title, video: image }) => {
-  console.log("HeroSection image", image);
-  console.log("HeroSection title", title);
-
   const imageUrl = getStrapiMedia(image.url) || "/default-image.jpg";
 
   return (

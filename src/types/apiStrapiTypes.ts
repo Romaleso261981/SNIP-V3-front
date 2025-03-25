@@ -100,16 +100,18 @@ export type BuyFromUsResponce = {
 
 export type DoItYourselfResponce = {
   id: number;
-  main: {
+  hero: {
     id: number;
-    bottomText: string;
+    description: string;
+    secondaryDescription: string;
     title: string;
-    text: string;
   };
-  examples: {
+  guides: {
     id: number;
+    description: string;
+    gif: string;
     image: StrapiImage;
-    title: string;
+    videoSrc: string;
   }[];
 };
 
@@ -118,17 +120,24 @@ export type InviteUsResponce = {
 };
 
 export type InviteUsStrapiResponce = {
-  id: number;
-  gallery: StrapiImage[];
+  buttons: {
+    id: number;
+    link: string;
+    name: string;
+  }[];
   examples: {
-    id: string;
-    text: string;
+    id: number;
+    title: string;
     description: string;
     image: StrapiImage;
   }[];
-  locale: string;
-  text: string;
-  title: string;
+  hero: {
+    id: number;
+    title: string;
+    description: string;
+    secondaryDescription: string;
+  };
+  gallery: StrapiImage[];
 };
 
 export type InviteUsCardsStrapiResponce = {

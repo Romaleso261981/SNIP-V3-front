@@ -112,10 +112,11 @@ export async function getDoItYourselfStrapiData(locale: string = "uk") {
   try {
     const urlParamsObject = {
       populate: {
-        main: {
+        guides: {
           populate: "*",
         },
-        examples: {
+
+        hero: {
           populate: "*",
         },
       },
@@ -140,10 +141,16 @@ export async function getInviteUsStrapiData(locale: string = "uk") {
   try {
     const urlParamsObject = {
       populate: {
-        examples: {
+        buttons: {
           populate: "*",
         },
         gallery: {
+          populate: "*",
+        },
+        examples: {
+          populate: "*",
+        },
+        hero: {
           populate: "*",
         },
       },
