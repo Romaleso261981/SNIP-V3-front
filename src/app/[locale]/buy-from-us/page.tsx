@@ -1,4 +1,5 @@
 import BuyFromUsDescription from "@/components/complex/BuyFromUs/BuyFromUsDescription";
+import ProductList from "@/components/complex/BuyFromUs/ProductList";
 import GeneralLayout from "@/components/layout/GeneralLayout/GeneralLayout";
 import { getByFromUsStrapiData } from "@/utils/fetch-api";
 import { Metadata } from "next";
@@ -17,12 +18,12 @@ export default async function page({
 }) {
   const { locale } = await params;
 
-  const { data } = await getByFromUsStrapiData(locale);
+  const { data, naboris } = await getByFromUsStrapiData(locale);
 
   return (
     <GeneralLayout>
       <BuyFromUsDescription data={data} />
-      {/* <ProductList cards={naboris} /> */}
+      <ProductList cards={naboris} />
     </GeneralLayout>
   );
 }

@@ -10,8 +10,6 @@ import { Pagination } from "@mui/material";
 import { useState } from "react";
 
 export default function ProductList({ cards }: { cards: Card[] }) {
-  console.log("cards", cards);
-
   const [page, setPage] = useState(1);
   const perPage = 5;
   const count = Math.ceil(cards.length / perPage);
@@ -29,7 +27,8 @@ export default function ProductList({ cards }: { cards: Card[] }) {
     <div>
       <div className='w-full text-center text-gold grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 2xl:grid-cols-4 gap-3 justify-center border-gold mt-15 mb-14 md:my-5'>
         {cardList.map((card: Card) => {
-          const imageUrl = getStrapiMedia(card.images[0]?.url);
+          const imageUrl = getStrapiMedia(card.gallery.images[0].url);
+
           return (
             <Link
               href={`product/${card.id}`}

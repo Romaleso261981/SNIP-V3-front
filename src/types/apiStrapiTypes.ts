@@ -144,15 +144,13 @@ export type InviteUsCardsStrapiResponce = {
 
 export type Card = {
   id: number;
-  images: StrapiImage[];
+  guide: string;
+  gallery: { id: string; images: StrapiImage[] };
   includes: string;
   material: string;
   name: string;
   price: number;
   size: string;
-  count?: number;
-  union: string;
-  image: StrapiImage;
 };
 
 export type NaboriResponce = Card[];

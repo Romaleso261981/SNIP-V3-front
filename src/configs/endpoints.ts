@@ -2,9 +2,9 @@ export const endpoints = {
   info: "info",
   home: "home",
   about: "about-us",
-  naboris: "naboris",
+  naboris: "products",
   inviteUs: "invite-us",
   byFromUs: "buy-from-us",
   doItYourself: "do-it-yourself",
-  masterKlasi: "majsterklas"
+  masterKlasi: "majsterklas",
 };

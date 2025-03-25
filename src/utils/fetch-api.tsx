@@ -176,7 +176,11 @@ export async function getByFromUsStrapiData(locale: string = "uk") {
     };
 
     const urlParamsNabori = {
-      populate: "*",
+      populate: {
+        gallery: {
+          populate: "*",
+        },
+      },
       locale: locale,
     };
 
