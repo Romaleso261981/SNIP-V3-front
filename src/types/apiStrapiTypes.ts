@@ -67,24 +67,19 @@ export type HomeStrapiResponce = {
 };
 
 export type AboutStrapiResponce = {
-  id: number;
   bottomFirstText: string;
   bottomSecondText: string;
-  desctopSeparatorImage: StrapiImage;
-  separatorImageMobile: StrapiImage;
-  imagesDesctop: StrapiImage[];
-  images: {
-    images: StrapiImage[];
-  };
-  leftFounder: string;
-  main: {
-    id: string;
-    text: string;
+  hero: {
+    id: number;
+    description: string;
     title: string;
-    bottomText: string;
+    secondaryDescription: string;
   };
-
+  gallery: { id: number; images: StrapiImage[] }[];
+  leftFounder: string;
   rightFounder: string;
+  mobileImage: StrapiImage[];
+  separatorImage: StrapiImage;
 };
 
 export type BuyFromUsResponce = {

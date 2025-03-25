@@ -10,26 +10,25 @@ import BottomDescription from "@/components/complex/About/BottomDescription";
 export const metadata: Metadata = {
   title: "About US",
   description:
-    "We are a team of professionals who are passionate about their work. We are always ready to help you with the design of your home, office, or any other space. We are always ready to help you with the design of your home, office, or any other space."
+    "We are a team of professionals who are passionate about their work. We are always ready to help you with the design of your home, office, or any other space. We are always ready to help you with the design of your home, office, or any other space.",
 };
 
 export default async function AboutUsPage({
-  params
+  params,
 }: {
   params: Promise<{ locale: string }>;
 }) {
   const { locale } = await params;
 
-  const { data }: { data: AboutStrapiResponce } = await getAboutStrapiData(
-    locale
-  );
+  const { data }: { data: AboutStrapiResponce } =
+    await getAboutStrapiData(locale);
 
   if (!data) return <Loader />;
 
   return (
     <GeneralLayout>
-      <div className="mx-auto flex flex-col justify-center items-center w-full text-center pt-10 md:p-0">
-        <TopDescription main={data.main} />
+      <div className='mx-auto flex flex-col justify-center items-center w-full text-center pt-10 md:p-0'>
+        <TopDescription hero={data.hero} />
         <MidleDescription data={data} />
         <BottomDescription data={data} />
       </div>

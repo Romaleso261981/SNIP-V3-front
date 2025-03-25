@@ -75,23 +75,19 @@ export async function getAboutStrapiData(locale: string = "uk") {
   try {
     const urlParamsObject = {
       populate: {
-        main: {
+        separatorImage: {
           populate: "*",
         },
-        desctopSeparatorImage: {
+        mobileImage: {
           populate: "*",
         },
-        separatorImageMobile: {
+        hero: {
           populate: "*",
         },
-        imagesDesctop: {
-          populate: "*",
-        },
-        images: {
+        gallery: {
           populate: "*",
         },
       },
-
       locale: locale,
     };
 
