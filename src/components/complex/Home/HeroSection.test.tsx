@@ -2,6 +2,20 @@ import { render, screen } from "@testing-library/react";
 import HeroSection from "./Hero";
 import { StrapiImage } from "@/types/apiStrapiTypes";
 
+// Мокуємо `getStrapiMedia`
+jest.mock("@/utils/api-helpers", () => ({
+  getStrapiMedia: (url: string) => url,
+}));
+
+// Мокуємо `next/image`, щоб уникнути проблем у Jest
+jest.mock("next/image", () => ({
+  __esModule: true,
+  default: ({ src, alt, ...props }) => {
+    // eslint-disable-next-line @next/next/no-img-element
+    return <img src={src} alt={alt || "mocked image"} {...props} role='img' />;
+  },
+}));
+
 describe("HeroSection", () => {
   const mockData = {
     title: "Вплети традицію у свій інтер'єр!",
